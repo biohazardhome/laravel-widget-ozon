@@ -31,7 +31,7 @@ class Widget {
         	return $this->rating();
         });
 
-		return view('widget', compact('products', 'rating'));
+		return view('widget::index', compact('products', 'rating'));
 	}
 
 	public function products() {

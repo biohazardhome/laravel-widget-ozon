@@ -8,6 +8,9 @@ use Biohazard\Http\OzonApi;
 
 class Ozon extends ServiceProvider
 {
+
+    private const PATH_VIEWS = __DIR__ . '/../../resources/views/';
+
     /**
      * Register services.
      */
@@ -21,7 +24,11 @@ class Ozon extends ServiceProvider
      */
     public function boot(): void
     {
-        
+        $this->loadViewsFrom(self::PATH_VIEWS, 'widget');
+        $this->publishes([
+            self::PATH_VIEWS => resource_path('views/widget'),
+        ], 'widget');
+
         Http::macro('ozonApi', function () {
             return Http::withHeaders([
                 'Content-Type' => 'application/json',
