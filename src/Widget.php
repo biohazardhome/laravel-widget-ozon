@@ -2,7 +2,7 @@
 
 namespace Biohazard;
 
-use App\Http\OzonApi;
+use Biohazard\Http\OzonApi;
 use stdClass;
 
 class Widget {
