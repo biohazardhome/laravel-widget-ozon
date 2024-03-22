@@ -1,0 +1,24 @@
+{
+    "name": "biohazard/laravel-widget-ozon",
+    "description": "Ozon widget Laravel for site",
+    "keywords": ["ozon widget laravel", "widget ozon laravel", "laravel widget ozon", "widget ozon", "ozon widget", "larave ozon", "ozon larave"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Biohazard\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "biohazardhome",
+            "email": "biohazardhome@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Biohazard\\Providers\\Ozon"
+            ]
+        }
+    }
+}
