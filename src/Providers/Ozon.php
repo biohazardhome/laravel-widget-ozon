@@ -9,7 +9,7 @@ use Biohazard\Http\OzonApi;
 class Ozon extends ServiceProvider
 {
 
-    private const PATH_VIEWS = __DIR__ . '/../../resources/views/';
+    private const PATH_VIEWS = __DIR__ .'/../../resources/views/';
 
     /**
      * Register services.
@@ -27,6 +27,8 @@ class Ozon extends ServiceProvider
         $this->loadViewsFrom(self::PATH_VIEWS, 'widget');
         $this->publishes([
             self::PATH_VIEWS => resource_path('views/widget'),
+            __DIR__.'/../../resources/css/' => public_path('css/widget'),
+            __DIR__.'/../../resources/js/' => public_path('js/widget'),
         ], 'widget');
 
         Http::macro('ozonApi', function () {
