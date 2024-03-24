@@ -20,7 +20,7 @@
                         @foreach($product->images as $image)
                             <div class="swiper-slide">
                                 <a href="{{ $product->url }}" title="{{ $title }}">
-                                    <img class="widget-product-image" src="{{ $image }}" alt="" title="{{ $title }}" loading="lazy">
+                                    <img class="widget-product-image" src="{{ $image }}" alt="Изображение {{ $title }}" title="{{ $title }}" loading="lazy">
                                 </a>
                             </div>
                         @endforeach
@@ -38,7 +38,7 @@
                     </a>
                 </div>
 
-                <a href="{{ $product->url }}" class="widget-product-buy">🛒 Купить</a>
+                <a href="{{ $product->url }}" title="Купить {{ $title }}" class="widget-product-buy">🛒 Купить</a>
             </div>
         @endforeach 
     </div>
