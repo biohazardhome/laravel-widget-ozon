@@ -71,3 +71,24 @@
     color: #070707;
     text-decoration: none;
 }
+
+.widget-product-buy {
+    display: block;
+    background-color: #005bff;
+    color: #fff;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 0;
+    overflow: hidden;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.widget-product-buy:hover {
+    opacity: 0.8;
+}

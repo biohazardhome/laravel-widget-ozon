@@ -37,6 +37,8 @@
                         {{ str($product->name)->limit(50) }}
                     </a>
                 </div>
+
+                <a href="{{ $product->url }}" class="widget-product-buy">🛒 Купить</a>
             </div>
         @endforeach 
     </div>
