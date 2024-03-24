@@ -19,7 +19,7 @@ class OzonApi
 
     public function get(string $url, array $query = []): array
     {
-        $response = Http::ozonApi()->get($url, $query);
+        $response = Http::connection()->get($url, $query);
         $this->response = $response;
         
         if ($response->successful()) {
@@ -31,7 +31,7 @@ class OzonApi
 
     public function post(string $url, array|object $query = []): array
     {
-        $response = Http::ozonApi()->post($url, $query);
+        $response = Http::connection()->post($url, $query);
         $this->response = $response;
 
         if ($response->successful()) {

@@ -31,7 +31,7 @@ class Ozon extends ServiceProvider
             __DIR__.'/../../resources/js/' => public_path('js/widget'),
         ], 'widget');
 
-        Http::macro('ozonApi', function () {
+        Http::macro('connection', function () {
             return Http::withHeaders([
                 'Content-Type' => 'application/json',
                 'Client-Id' => env('OZON_CLIENT_ID'),
