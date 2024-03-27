@@ -41,8 +41,7 @@ class Widget {
 		$list = $this->api->productList($filter, static::LIMIT);
         
         $products = [];
-        foreach($list['items'] as $item) {
-            // $item = $item;
+        foreach($list->items as $item) {
             $product = $this->api->productInfo($item->product_id, $item->offer_id);
 
             $this->productPrepare($product);
