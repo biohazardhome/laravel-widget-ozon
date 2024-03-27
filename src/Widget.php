@@ -42,8 +42,8 @@ class Widget {
         
         $products = [];
         foreach($list['items'] as $item) {
-            $item = (object) $item;
-            $product = (object) $this->api->productInfo($item->product_id, $item->offer_id);
+            // $item = $item;
+            $product = $this->api->productInfo($item->product_id, $item->offer_id);
 
             $this->productPrepare($product);
 
@@ -57,12 +57,12 @@ class Widget {
 	public function rating() {
 		$groups = $this->api->ratingSummary();
 		foreach($groups as $group) {
-			if ($group['group_name'] === 'Оценка продавца') {
+			if ($group->group_name === 'Оценка продавца') {
 				break;
 			}
 		}
 
-		return (object) $group['items'][0]/*['current_value']*/;
+		return $group->items[0];
 	}
 
 	public function getProducts():array {

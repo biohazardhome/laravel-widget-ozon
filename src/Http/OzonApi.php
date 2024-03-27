@@ -23,7 +23,7 @@ class OzonApi
         $this->response = $response;
         
         if ($response->successful()) {
-            return $response->json();
+            return $response->object();
         } else {
             $response->throw();
         }
