@@ -14,8 +14,7 @@ class Widget {
 		VISIBLE = 'VISIBLE'; // ALL, VISIBLE, TO_SUPPLY, IN_SALE, OVERPRICED
 
 	public
-		$api = null,
-		$products = [];
+		$api = null;
 
 	public function __construct() {
 		$this->api = app(OzonApi::class);		
@@ -48,7 +47,6 @@ class Widget {
 
             $products[] = $product;
         }
-        $this->products = $products;
 
         return $products;
 	}
@@ -62,10 +60,6 @@ class Widget {
 		}
 
 		return $group->items[0];
-	}
-
-	public function getProducts():array {
-		return $this->products;
 	}
 
 	public function productPrepare(object $product):object {
